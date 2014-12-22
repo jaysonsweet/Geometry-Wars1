@@ -68,5 +68,6 @@ public class Ship : MonoBehaviour {
 
 		rigidbody2D.angularVelocity = 0;
 		transform.up = direction;
-	}
-}
+	    } 
+    }
+

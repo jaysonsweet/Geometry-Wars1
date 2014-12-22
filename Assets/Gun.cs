@@ -16,6 +16,10 @@ public class Gun : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		Vector2 mouseWorld = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		Vector2 direction = mouseWorld - (Vector2)transform.position;
+		transform.up = direction;
+
 		fireTime -= Time.deltaTime;
 
 		if ( fireTime <= 0 ) {
